@@ -4,10 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DepartmentComponent } from './shared/components/department/department.component';
+import { EmployeeComponent } from './shared/components/employee/employee.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DepartmentComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

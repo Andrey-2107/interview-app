@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "interview-app"
+  "defaultProject": "interview-app",
+  "cli": {
+    "analytics": "64a88778-06af-40fe-b212-80cb75e35a89"
+  }
 }
