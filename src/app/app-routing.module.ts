@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {DepartmentComponent} from './shared/components/department/department.component';
-import {EmployeeComponent} from './shared/components/employee/employee.component';
+import {DepartmentPageComponent} from "./pages/department-page/department-page.component";
+import {EmployeePageComponent} from "./pages/employee-page/employee-page.component";
+
 
 
 const routes: Routes = [
-  {path: '', component: DepartmentComponent},
-  {path: 'department', component: DepartmentComponent},
-  {path: 'employee', component: EmployeeComponent}
+  {path: '', component: DepartmentPageComponent},
+  {path: 'department', component: DepartmentPageComponent},
+  {path: 'employee', component: EmployeePageComponent}
 ];
 
 @NgModule({
