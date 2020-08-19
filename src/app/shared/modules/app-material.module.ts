@@ -1,10 +1,10 @@
-import {NgModule} from "@angular/core";
+import { NgModule } from "@angular/core";
 
-NgModule({
+@NgModule({
   exports: [],
   providers: []
-});
+})
 
 export class AppMaterialModule {
-  
+
 }
