@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {DepartmentPageComponent} from "./pages/department-page/department-page.component";
-import {EmployeePageComponent} from "./pages/employee-page/employee-page.component";
-
+import {DepartmentComponent} from "./views/departments/pages/department/department.component";
 
 
 const routes: Routes = [
-  {path: '', component: DepartmentPageComponent},
-  {path: 'department', component: DepartmentPageComponent},
-  {path: 'employee', component: EmployeePageComponent}
+
+  // {path: 'department', component: DepartmentComponent},
+  {
+    path: '',
+    loadChildren: () => import('./views/departments/department.module').then((m) => m.DepartmentModule),
+  },
+  {
+    path: 'employees',
+    loadChildren: () => import('./views/employees/employees.module').then((m) => m.EmployeesModule),
+  }
 ];
 
 @NgModule({
