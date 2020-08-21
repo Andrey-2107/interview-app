@@ -6,16 +6,15 @@
            matSort matSortActive="created" matSortDisableClear matSortDirection="desc">
 
       <ng-container *ngFor="let column of columns" [matColumnDef]="column.name">
-        <th mat-header-cell *matHeaderCellDef>{{column.uiName}}</th>
-        <td mat-cell *matCellDef="let row">{{row[column.name]}}</td>
+        <mat-header-cell *matHeaderCellDef>{{column.uiName}}</mat-header-cell >
+        <mat-cell *matCellDef="let row">{{row[column.name]}}</mat-cell>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr
-        mat-row
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row
         *matRowDef="let row; columns: displayedColumns;"
         (click)="onNavigate(row.id)"
-      >{{row}}</tr>
+      >{{row}}</mat-row>
     </mat-table>
   </div>
 
