@@ -1,0 +1,22 @@
+<div class="example-container mat-elevation-z8">
+
+  <div class="example-table-container">
+
+    <mat-table [dataSource]="dataSource" class="example-table"
+           matSort matSortActive="created" matSortDisableClear matSortDirection="desc">
+
+      <ng-container *ngFor="let column of columns" [matColumnDef]="column.name">
+        <mat-header-cell *matHeaderCellDef>{{column.uiName}}</mat-header-cell >
+        <mat-cell *matCellDef="let row">{{row[column.name]}}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row
+        *matRowDef="let row; columns: displayedColumns;"
+        (click)="onNavigate(row.id)"
+      >{{row}}</mat-row>
+    </mat-table>
+  </div>
+
+  <mat-paginator [length]="resultsLength" [pageSize]="30"></mat-paginator>
+</div>

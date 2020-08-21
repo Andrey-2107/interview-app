@@ -1,0 +1,15 @@
+<div class="wrapper" *ngIf="currentDepartment && currentEmployee">
+  <div class="employee-wrapper">
+    <h2>Full name: {{currentEmployee.fullName}}</h2>
+    <p>Date of Birth: {{currentEmployee.dateOfBirth}}</p>
+    <p>Position: {{currentEmployee.position}}</p>
+    <p>Work experience: {{currentEmployee.experience}}</p>
+    <p>Total work time: {{currentEmployee.totalWorkTime}}</p>
+    <p>Work Over Time Of Week: {{currentEmployee.workOverTimeOfWeek}}</p>
+    <p>Work Time Of Week: {{currentEmployee.workTimeOfWeek}}</p>
+  </div>
+  <div class="department-wrapper">
+    <h2>Department name: {{currentDepartment.departmentName}}</h2>
+    <p>Department location: {{currentDepartment.departmentLocation}}</p>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div *ngIf="currentDepartment" class="department-detail-wrap">
+  <h2>Name: {{ currentDepartment.departmentName }}</h2>
+  <p>Location: {{ currentDepartment.departmentLocation }}</p>
+  <p>Total work time: {{ currentDepartment.totalWorkTime }}</p>
+  <p>Work overtime of week: {{ currentDepartment.workOverTimeOfWeek }}</p>
+  <p>Work time of week: {{ currentDepartment.workTimeOfWeek }}</p>
+</div>
+
+<app-table *ngIf="currentDepartmentEmployees" [data]="currentDepartmentEmployees"></app-table>
+<div class="button-wrapper">
+  <button mat-button color="primary" routerLink="/employees">All employees</button>
+</div>
